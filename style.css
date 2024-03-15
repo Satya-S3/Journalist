@@ -23,6 +23,11 @@ header {
     justify-content: space-between;
     z-index: 99;
 
+    .h{
+        font-weight: 800;
+        text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    }
+
     h1{
         margin-left: 5rem;
     }
@@ -43,7 +48,7 @@ header {
     }
     nav ul li :hover{
         padding-bottom: 20px;
-        border-bottom: 4px solid red;
+        border-bottom: 4px solid rgb(242, 255, 0);
     }
 
     nav ul li a {
@@ -51,7 +56,7 @@ header {
         text-decoration: none;
     }
     nav ul li a:hover {
-        color: #c4c3c3;
+        color: #fbff00;
     }
 
 }
@@ -78,11 +83,21 @@ hr{
         
         span{
             color: rgb(239, 239, 2);
+            animation: glow 2s ease-in-out infinite alternate;
         }
     }
     
     img{
         width: 40rem;
+    }
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #f7ff12d6;
+    }
+    to {
+      text-shadow: 0 0 40px #f0f407ce, 0 0 10px #f3ff0adc;
     }
 }
 
@@ -155,18 +170,21 @@ hr{
         margin-top: 10px;
         font-size: 3.5rem;
         color: rgb(255, 255, 255);
-        animation: glow 2s ease-in-out infinite alternate;
-    }
-}
-@keyframes glow {
-    from {
-      text-shadow: 0 0 10px #ff1212;
-    }
-    to {
-      text-shadow: 0 0 40px #cb1f1f, 0 0 10px #ce1313;
+        text-shadow: 2px 2px 5px black;
+        border-bottom: 2px solid yellow;
+        box-shadow: 0px 5px 7px  yellow;
     }
 }
 
+#about{
+    box-shadow: 2px 2px 5px black;
+    border-radius: 13px;
+    padding: 5px;
+
+    h2{
+        box-shadow: 2px 2px 10px black;
+    }
+}
 .about{
     display: flex;
     justify-content: center;
@@ -216,11 +234,10 @@ hr{
     color: black;
     margin: 20px;
     padding: 5px;
-    border-radius: 45% 55% 51% 49% / 15% 16% 84% 85%  ;
+    border-radius: 50px;
     text-align: center;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.616);
     h3{
-        font-weight: 500;
+        font-weight:bold;
         letter-spacing: 1px;
     }
 }
